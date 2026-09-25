@@ -1,0 +1,8 @@
+{
+  "status": "unsupported-topology",
+  "gif_created": false,
+  "reason": "Installed Fireworks 1.2.0 supports only fixed scene contracts. These Jev diagrams do not match those roles and topology. No motion metadata was fabricated.",
+  "dry_run_exit_code": 1,
+  "dry_run_output": "{\"ok\": false, \"error\": \"MOTION_METADATA: reviewed styles require explicit motion metadata on every edge\"}\n",
+  "delivered_alternative": "Validated static SVG and PNG; manual interactive walkthroughs in article HTML."
+}

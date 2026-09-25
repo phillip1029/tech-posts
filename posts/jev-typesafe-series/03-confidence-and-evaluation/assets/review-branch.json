@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "mode": "architecture",
+  "template_type": "architecture",
+  "style": 1,
+  "semantic_profile": "generic",
+  "quality_profile": "showcase",
+  "text_policy": "strict",
+  "width": 640,
+  "height": 460,
+  "title": "Policy consumes uncertainty",
+  "nodes": [
+    {
+      "id": "answer",
+      "kind": "rect",
+      "x": 200,
+      "y": 110,
+      "width": 240,
+      "height": 64,
+      "label": "Choice answer",
+      "sublabel": "Queue + confidence",
+      "fill": "#eff6ff",
+      "stroke": "#bfdbfe",
+      "flat": true
+    },
+    {
+      "id": "auto",
+      "kind": "rect",
+      "x": 40,
+      "y": 310,
+      "width": 240,
+      "height": 64,
+      "label": "Queue suggestion",
+      "sublabel": "Known queue AND confidence \u2265 t",
+      "fill": "#f0fdfa",
+      "stroke": "#bfdbfe",
+      "flat": true
+    },
+    {
+      "id": "review",
+      "kind": "rect",
+      "x": 360,
+      "y": 310,
+      "width": 240,
+      "height": 64,
+      "label": "Review",
+      "sublabel": "Other queue OR confidence < t",
+      "fill": "#fff7ed",
+      "stroke": "#bfdbfe",
+      "flat": true
+    }
+  ],
+  "arrows": [
+    {
+      "id": "accept",
+      "source": "answer",
+      "target": "auto",
+      "source_port": "left",
+      "target_port": "top",
+      "flow": "read",
+      "label": "both checks pass",
+      "label_style": "offset"
+    },
+    {
+      "id": "decline",
+      "source": "answer",
+      "target": "review",
+      "source_port": "right",
+      "target_port": "top",
+      "flow": "read",
+      "label": "otherwise",
+      "label_style": "offset"
+    }
+  ]
+}

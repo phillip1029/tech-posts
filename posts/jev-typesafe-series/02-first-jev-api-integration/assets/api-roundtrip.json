@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "mode": "architecture",
+  "template_type": "architecture",
+  "style": 1,
+  "semantic_profile": "generic",
+  "quality_profile": "showcase",
+  "text_policy": "strict",
+  "width": 480,
+  "height": 815,
+  "title": "One inspectable request",
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "rect",
+      "x": 100,
+      "y": 110,
+      "width": 280,
+      "height": 64,
+      "label": "Local files",
+      "sublabel": "request.json + triage.py",
+      "fill": "#eff6ff",
+      "stroke": "#bfdbfe",
+      "flat": true
+    },
+    {
+      "id": "n1",
+      "kind": "rect",
+      "x": 100,
+      "y": 244,
+      "width": 280,
+      "height": 64,
+      "label": "Python HTTP client",
+      "sublabel": "Read key from environment",
+      "fill": "#eff6ff",
+      "stroke": "#bfdbfe",
+      "flat": true
+    },
+    {
+      "id": "n2",
+      "kind": "rect",
+      "x": 100,
+      "y": 378,
+      "width": 280,
+      "height": 64,
+      "label": "TypeSafe API",
+      "sublabel": "Evaluate state and questions",
+      "fill": "#eff6ff",
+      "stroke": "#bfdbfe",
+      "flat": true
+    },
+    {
+      "id": "n3",
+      "kind": "rect",
+      "x": 100,
+      "y": 512,
+      "width": 280,
+      "height": 64,
+      "label": "Local terminal",
+      "sublabel": "Print answers, model, usage",
+      "fill": "#eff6ff",
+      "stroke": "#bfdbfe",
+      "flat": true
+    },
+    {
+      "id": "n4",
+      "kind": "rect",
+      "x": 100,
+      "y": 646,
+      "width": 280,
+      "height": 64,
+      "label": "Next step",
+      "sublabel": "Test cases before assignment",
+      "fill": "#f0fdfa",
+      "stroke": "#bfdbfe",
+      "flat": true
+    }
+  ],
+  "arrows": [
+    {
+      "id": "e0",
+      "source": "n0",
+      "target": "n1",
+      "source_port": "bottom",
+      "target_port": "top",
+      "flow": "read",
+      "label": "load JSON",
+      "label_style": "offset"
+    },
+    {
+      "id": "e1",
+      "source": "n1",
+      "target": "n2",
+      "source_port": "bottom",
+      "target_port": "top",
+      "flow": "read",
+      "label": "POST /v1/systemone",
+      "label_style": "offset"
+    },
+    {
+      "id": "e2",
+      "source": "n2",
+      "target": "n3",
+      "source_port": "bottom",
+      "target_port": "top",
+      "flow": "read",
+      "label": "JSON response",
+      "label_style": "offset"
+    },
+    {
+      "id": "e3",
+      "source": "n3",
+      "target": "n4",
+      "source_port": "bottom",
+      "target_port": "top",
+      "flow": "read",
+      "label": "inspect",
+      "label_style": "offset"
+    }
+  ]
+}

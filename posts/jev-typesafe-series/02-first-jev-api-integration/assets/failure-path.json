@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "mode": "architecture",
+  "template_type": "architecture",
+  "style": 1,
+  "semantic_profile": "generic",
+  "quality_profile": "showcase",
+  "text_policy": "strict",
+  "width": 640,
+  "height": 610,
+  "title": "A response is not an action",
+  "nodes": [
+    {
+      "id": "response",
+      "kind": "rect",
+      "x": 200,
+      "y": 110,
+      "width": 240,
+      "height": 64,
+      "label": "HTTP attempt",
+      "sublabel": "One call from triage.py",
+      "fill": "#eff6ff",
+      "stroke": "#bfdbfe",
+      "flat": true
+    },
+    {
+      "id": "success",
+      "kind": "rect",
+      "x": 40,
+      "y": 290,
+      "width": 240,
+      "height": 64,
+      "label": "Success",
+      "sublabel": "Print response; inspect fields",
+      "fill": "#eff6ff",
+      "stroke": "#bfdbfe",
+      "flat": true
+    },
+    {
+      "id": "failure",
+      "kind": "rect",
+      "x": 360,
+      "y": 290,
+      "width": 240,
+      "height": 64,
+      "label": "Failure",
+      "sublabel": "Exit with error; no assignment",
+      "fill": "#fff7ed",
+      "stroke": "#bfdbfe",
+      "flat": true
+    },
+    {
+      "id": "policy",
+      "kind": "rect",
+      "x": 40,
+      "y": 480,
+      "width": 240,
+      "height": 64,
+      "label": "Optional policy",
+      "sublabel": "Validated answer \u2192 suggestion",
+      "fill": "#eff6ff",
+      "stroke": "#bfdbfe",
+      "flat": true
+    },
+    {
+      "id": "repair",
+      "kind": "rect",
+      "x": 360,
+      "y": 480,
+      "width": 240,
+      "height": 64,
+      "label": "Diagnose first",
+      "sublabel": "Auth / schema / transient error",
+      "fill": "#fff7ed",
+      "stroke": "#bfdbfe",
+      "flat": true
+    }
+  ],
+  "arrows": [
+    {
+      "id": "ok",
+      "source": "response",
+      "target": "success",
+      "source_port": "left",
+      "target_port": "top",
+      "flow": "read",
+      "label": "success",
+      "label_style": "offset"
+    },
+    {
+      "id": "err",
+      "source": "response",
+      "target": "failure",
+      "source_port": "right",
+      "target_port": "top",
+      "flow": "read",
+      "label": "HTTP / network error",
+      "label_style": "offset"
+    },
+    {
+      "id": "inspect",
+      "source": "success",
+      "target": "policy",
+      "source_port": "bottom",
+      "target_port": "top",
+      "flow": "read",
+      "label": "manual next step",
+      "label_style": "offset"
+    },
+    {
+      "id": "diagnose",
+      "source": "failure",
+      "target": "repair",
+      "source_port": "bottom",
+      "target_port": "top",
+      "flow": "read",
+      "label": "investigate",
+      "label_style": "offset"
+    }
+  ]
+}

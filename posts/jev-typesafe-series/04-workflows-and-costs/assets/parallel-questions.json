@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "mode": "architecture",
+  "template_type": "architecture",
+  "style": 1,
+  "semantic_profile": "generic",
+  "quality_profile": "showcase",
+  "text_policy": "strict",
+  "width": 640,
+  "height": 610,
+  "title": "Shared input, independent questions",
+  "nodes": [
+    {
+      "id": "state",
+      "kind": "rect",
+      "x": 200,
+      "y": 110,
+      "width": 240,
+      "height": 64,
+      "label": "One shared state",
+      "sublabel": "The support message",
+      "fill": "#eff6ff",
+      "stroke": "#bfdbfe",
+      "flat": true
+    },
+    {
+      "id": "dept",
+      "kind": "rect",
+      "x": 40,
+      "y": 290,
+      "width": 240,
+      "height": 64,
+      "label": "Department Choice",
+      "sublabel": "Billing / technical / review",
+      "fill": "#eff6ff",
+      "stroke": "#bfdbfe",
+      "flat": true
+    },
+    {
+      "id": "human",
+      "kind": "rect",
+      "x": 360,
+      "y": 290,
+      "width": 240,
+      "height": 64,
+      "label": "Human-request Noul",
+      "sublabel": "Probability of explicit request",
+      "fill": "#eff6ff",
+      "stroke": "#bfdbfe",
+      "flat": true
+    },
+    {
+      "id": "code",
+      "kind": "rect",
+      "x": 200,
+      "y": 480,
+      "width": 240,
+      "height": 64,
+      "label": "Application code",
+      "sublabel": "Read both; choose relevant action",
+      "fill": "#f0fdfa",
+      "stroke": "#bfdbfe",
+      "flat": true
+    }
+  ],
+  "arrows": [
+    {
+      "id": "q1",
+      "source": "state",
+      "target": "dept",
+      "source_port": "left",
+      "target_port": "top",
+      "flow": "read",
+      "label": "same evidence",
+      "label_style": "offset"
+    },
+    {
+      "id": "q2",
+      "source": "state",
+      "target": "human",
+      "source_port": "right",
+      "target_port": "top",
+      "flow": "read",
+      "label": "same evidence",
+      "label_style": "offset"
+    },
+    {
+      "id": "a1",
+      "source": "dept",
+      "target": "code",
+      "source_port": "bottom",
+      "target_port": "left",
+      "flow": "read",
+      "label": "choice + confidence",
+      "label_style": "offset"
+    },
+    {
+      "id": "a2",
+      "source": "human",
+      "target": "code",
+      "source_port": "bottom",
+      "target_port": "right",
+      "flow": "read",
+      "label": "yes probability",
+      "label_style": "offset"
+    }
+  ]
+}

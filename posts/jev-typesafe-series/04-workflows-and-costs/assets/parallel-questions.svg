@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 610" width="640" height="610" data-generator="fireworks-tech-graph" data-schema-version="1" data-text-metrics="heuristic-v1" data-style-id="1" data-visual-theme="Flat Icon" data-diagram-type="architecture" data-motion-scene="" data-semantic-profile="generic" data-semantic-valid="true" data-quality-profile="showcase" data-max-bends-per-edge="2" data-max-total-bends="8" data-max-route-stretch="1.35" data-max-bridged-crossings="0" data-min-node-gap="40.0" data-min-container-gutter="20.0" data-min-label-clearance="4.0" data-min-segment-length="16.0">
+  <defs>
+    <marker id="arrowA" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#7c3aed"/>
+    </marker>
+    <marker id="arrowB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#10b981"/>
+    </marker>
+    <marker id="arrowC" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowE" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f97316"/>
+    </marker>
+    <marker id="arrowF" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#7c3aed"/>
+    </marker>
+    <marker id="arrowG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arrowH" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/>
+    </marker>
+    <filter id="shadowSoft" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <filter id="shadowGlass" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#020617" flood-opacity="0.28"/>
+    </filter>
+    <style>
+    text { font-family: 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Noto Sans CJK SC', 'Microsoft YaHei', 'Microsoft JhengHei', 'SimHei', sans-serif; }
+    .title { font-size: 30px; font-weight: 700; fill: #111827; }
+    .subtitle { font-size: 14px; font-weight: 500; fill: #6b7280; }
+    .section { font-size: 13px; font-weight: 700; fill: #2563eb; letter-spacing: 1.4px; }
+    .section-sub { font-size: 12px; font-weight: 500; fill: #64748b; }
+    .node-title { font-weight: 700; fill: #111827; }
+    .node-sub { font-weight: 500; fill: #6b7280; }
+    .node-type { font-size: 12px; font-weight: 700; fill: #64748b; letter-spacing: 0.08em; }
+    .arrow-label { font-size: 12px; font-weight: 600; fill: #6b7280; }
+    .legend { font-size: 12px; font-weight: 500; fill: #6b7280; }
+    .footnote { font-size: 12px; font-weight: 500; fill: #64748b; }
+    .metric-label { font-size: 8.5px; font-weight: 700; fill: #64748b; text-transform: uppercase; }
+    .metric-value { font-size: 9.5px; font-weight: 700; fill: #111827; }
+    </style>
+  </defs>
+  <rect data-graph-role="background" width="640.0" height="610.0" fill="#ffffff"/>
+  <text x="320.0" y="56" text-anchor="middle" class="title">Shared input, independent questions</text>
+  <path id="q1" data-graph-role="edge" data-edge-id="q1" data-source="state" data-target="dept" data-edge-kind="flow" data-topic-id="" data-flow="read" data-motion-role="" data-motion-stage="" data-motion-order="" data-protocol="" data-via="" data-critical-path-id="" data-critical-hop="" data-critical-hops="" data-critical="false" data-bends="1" data-route-stretch="1.0" data-bridges="" d="M 200,142 L 160,142 L 160,290" fill="none" stroke="#2563eb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowC)"/>
+  <path id="q2" data-graph-role="edge" data-edge-id="q2" data-source="state" data-target="human" data-edge-kind="flow" data-topic-id="" data-flow="read" data-motion-role="" data-motion-stage="" data-motion-order="" data-protocol="" data-via="" data-critical-path-id="" data-critical-hop="" data-critical-hops="" data-critical="false" data-bends="1" data-route-stretch="1.0" data-bridges="" d="M 440,142 L 480,142 L 480,290" fill="none" stroke="#2563eb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowC)"/>
+  <path id="a1" data-graph-role="edge" data-edge-id="a1" data-source="dept" data-target="code" data-edge-kind="flow" data-topic-id="" data-flow="read" data-motion-role="" data-motion-stage="" data-motion-order="" data-protocol="" data-via="" data-critical-path-id="" data-critical-hop="" data-critical-hops="" data-critical="false" data-bends="1" data-route-stretch="1.0" data-bridges="" d="M 160,354 L 160,512 L 200,512" fill="none" stroke="#2563eb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowC)"/>
+  <path id="a2" data-graph-role="edge" data-edge-id="a2" data-source="human" data-target="code" data-edge-kind="flow" data-topic-id="" data-flow="read" data-motion-role="" data-motion-stage="" data-motion-order="" data-protocol="" data-via="" data-critical-path-id="" data-critical-hop="" data-critical-hops="" data-critical="false" data-bends="1" data-route-stretch="1.0" data-bridges="" d="M 480,354 L 480,512 L 440,512" fill="none" stroke="#2563eb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowC)"/>
+  <g id="node-state" data-graph-role="node" data-node-id="state" data-semantic-role="rect" data-motion-role="" data-motion-stage="" data-motion-order="" data-parent="" data-deployment-id="" data-topic-id="" data-span-id="" data-station-order="" data-status="" data-start-ms="" data-duration-ms="" data-parent-span="" data-graph-bounds="200,110,440,174">
+  <rect x="200.0" y="110.0" width="240.0" height="64.0" rx="10.0" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.8"/>
+  <text data-text-role="title" data-full-text="One shared state" data-text-max-width="216.0" x="320.0" y="142.0" text-anchor="middle" class="node-title" font-size="18">One shared state</text>
+  <text data-text-role="subtitle" data-full-text="The support message" data-text-max-width="216.0" x="320.0" y="164.0" text-anchor="middle" class="node-sub" font-size="12">The support message</text>
+  </g>
+  <g id="node-dept" data-graph-role="node" data-node-id="dept" data-semantic-role="rect" data-motion-role="" data-motion-stage="" data-motion-order="" data-parent="" data-deployment-id="" data-topic-id="" data-span-id="" data-station-order="" data-status="" data-start-ms="" data-duration-ms="" data-parent-span="" data-graph-bounds="40,290,280,354">
+  <rect x="40.0" y="290.0" width="240.0" height="64.0" rx="10.0" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.8"/>
+  <text data-text-role="title" data-full-text="Department Choice" data-text-max-width="216.0" x="160.0" y="322.0" text-anchor="middle" class="node-title" font-size="18">Department Choice</text>
+  <text data-text-role="subtitle" data-full-text="Billing / technical / review" data-text-max-width="216.0" x="160.0" y="344.0" text-anchor="middle" class="node-sub" font-size="12">Billing / technical / review</text>
+  </g>
+  <g id="node-human" data-graph-role="node" data-node-id="human" data-semantic-role="rect" data-motion-role="" data-motion-stage="" data-motion-order="" data-parent="" data-deployment-id="" data-topic-id="" data-span-id="" data-station-order="" data-status="" data-start-ms="" data-duration-ms="" data-parent-span="" data-graph-bounds="360,290,600,354">
+  <rect x="360.0" y="290.0" width="240.0" height="64.0" rx="10.0" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.8"/>
+  <text data-text-role="title" data-full-text="Human-request Noul" data-text-max-width="216.0" x="480.0" y="322.0" text-anchor="middle" class="node-title" font-size="18">Human-request Noul</text>
+  <text data-text-role="subtitle" data-full-text="Probability of explicit request" data-text-max-width="216.0" x="480.0" y="344.0" text-anchor="middle" class="node-sub" font-size="12">Probability of explicit request</text>
+  </g>
+  <g id="node-code" data-graph-role="node" data-node-id="code" data-semantic-role="rect" data-motion-role="" data-motion-stage="" data-motion-order="" data-parent="" data-deployment-id="" data-topic-id="" data-span-id="" data-station-order="" data-status="" data-start-ms="" data-duration-ms="" data-parent-span="" data-graph-bounds="200,480,440,544">
+  <rect x="200.0" y="480.0" width="240.0" height="64.0" rx="10.0" fill="#f0fdfa" stroke="#bfdbfe" stroke-width="1.8"/>
+  <text data-text-role="title" data-full-text="Application code" data-text-max-width="216.0" x="320.0" y="512.0" text-anchor="middle" class="node-title" font-size="18">Application code</text>
+  <text data-text-role="subtitle" data-full-text="Read both; choose relevant action" data-text-max-width="216.0" x="320.0" y="534.0" text-anchor="middle" class="node-sub" font-size="11.44">Read both; choose relevant action</text>
+  </g>
+  <g id="q1-label" data-graph-role="label" data-owner="q1" data-graph-bounds="58.28,202,157,222">
+  <text x="107.64" y="216.0" text-anchor="middle" class="arrow-label">same evidence</text>
+  </g>
+  <g id="q2-label" data-graph-role="label" data-owner="q2" data-graph-bounds="378.28,202,477,222">
+  <text x="427.64" y="216.0" text-anchor="middle" class="arrow-label">same evidence</text>
+  </g>
+  <g id="a1-label" data-graph-role="label" data-owner="a1" data-graph-bounds="22.28,419,157,439">
+  <text x="89.64" y="433.0" text-anchor="middle" class="arrow-label">choice + confidence</text>
+  </g>
+  <g id="a2-label" data-graph-role="label" data-owner="a2" data-graph-bounds="370.6,419,477,439">
+  <text x="423.8" y="433.0" text-anchor="middle" class="arrow-label">yes probability</text>
+  </g>
+</svg>

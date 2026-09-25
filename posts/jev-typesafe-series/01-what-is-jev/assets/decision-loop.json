@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "mode": "architecture",
+  "template_type": "architecture",
+  "style": 1,
+  "semantic_profile": "generic",
+  "quality_profile": "showcase",
+  "text_policy": "strict",
+  "width": 480,
+  "height": 681,
+  "title": "From message to suggestion",
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "rect",
+      "x": 100,
+      "y": 110,
+      "width": 280,
+      "height": 64,
+      "label": "Customer message",
+      "sublabel": "\u201cScheduled export stopped.\u201d",
+      "fill": "#eff6ff",
+      "stroke": "#bfdbfe",
+      "flat": true
+    },
+    {
+      "id": "n1",
+      "kind": "rect",
+      "x": 100,
+      "y": 244,
+      "width": 280,
+      "height": 64,
+      "label": "Request payload",
+      "sublabel": "State + typed questions",
+      "fill": "#eff6ff",
+      "stroke": "#bfdbfe",
+      "flat": true
+    },
+    {
+      "id": "n2",
+      "kind": "rect",
+      "x": 100,
+      "y": 378,
+      "width": 280,
+      "height": 64,
+      "label": "Jev answers",
+      "sublabel": "Choice + Noul results",
+      "fill": "#eff6ff",
+      "stroke": "#bfdbfe",
+      "flat": true
+    },
+    {
+      "id": "n3",
+      "kind": "rect",
+      "x": 100,
+      "y": 512,
+      "width": 280,
+      "height": 64,
+      "label": "Application policy",
+      "sublabel": "Suggest queue or request review",
+      "fill": "#f0fdfa",
+      "stroke": "#bfdbfe",
+      "flat": true
+    }
+  ],
+  "arrows": [
+    {
+      "id": "e0",
+      "source": "n0",
+      "target": "n1",
+      "source_port": "bottom",
+      "target_port": "top",
+      "flow": "read",
+      "label": "supply context",
+      "label_style": "offset"
+    },
+    {
+      "id": "e1",
+      "source": "n1",
+      "target": "n2",
+      "source_port": "bottom",
+      "target_port": "top",
+      "flow": "read",
+      "label": "evaluate",
+      "label_style": "offset"
+    },
+    {
+      "id": "e2",
+      "source": "n2",
+      "target": "n3",
+      "source_port": "bottom",
+      "target_port": "top",
+      "flow": "read",
+      "label": "return values",
+      "label_style": "offset"
+    }
+  ]
+}

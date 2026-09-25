@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "mode": "architecture",
+  "template_type": "architecture",
+  "style": 1,
+  "semantic_profile": "generic",
+  "quality_profile": "showcase",
+  "text_policy": "strict",
+  "width": 320,
+  "height": 815,
+  "title": "",
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "rect",
+      "x": 30,
+      "y": 110,
+      "width": 260,
+      "height": 64,
+      "label": "Label the cases",
+      "sublabel": "Reviewers apply queue rules",
+      "fill": "#eff6ff",
+      "stroke": "#bfdbfe",
+      "flat": true
+    },
+    {
+      "id": "n1",
+      "kind": "rect",
+      "x": 30,
+      "y": 244,
+      "width": 260,
+      "height": 64,
+      "label": "Develop questions",
+      "sublabel": "Use development cases",
+      "fill": "#eff6ff",
+      "stroke": "#bfdbfe",
+      "flat": true
+    },
+    {
+      "id": "n2",
+      "kind": "rect",
+      "x": 30,
+      "y": 378,
+      "width": 260,
+      "height": 64,
+      "label": "Tune the policy",
+      "sublabel": "Use validation predictions",
+      "fill": "#eff6ff",
+      "stroke": "#bfdbfe",
+      "flat": true
+    },
+    {
+      "id": "n3",
+      "kind": "rect",
+      "x": 30,
+      "y": 512,
+      "width": 260,
+      "height": 64,
+      "label": "Held-out evaluation",
+      "sublabel": "Report coverage and errors",
+      "fill": "#eff6ff",
+      "stroke": "#bfdbfe",
+      "flat": true
+    },
+    {
+      "id": "n4",
+      "kind": "rect",
+      "x": 30,
+      "y": 646,
+      "width": 260,
+      "height": 64,
+      "label": "Shadow operation",
+      "sublabel": "Compare suggestions with outcomes",
+      "fill": "#f0fdfa",
+      "stroke": "#bfdbfe",
+      "flat": true
+    }
+  ],
+  "arrows": [
+    {
+      "id": "e0",
+      "source": "n0",
+      "target": "n1",
+      "source_port": "bottom",
+      "target_port": "top",
+      "flow": "read",
+      "label": "split data",
+      "label_style": "offset"
+    },
+    {
+      "id": "e1",
+      "source": "n1",
+      "target": "n2",
+      "source_port": "bottom",
+      "target_port": "top",
+      "flow": "read",
+      "label": "freeze question",
+      "label_style": "offset"
+    },
+    {
+      "id": "e2",
+      "source": "n2",
+      "target": "n3",
+      "source_port": "bottom",
+      "target_port": "top",
+      "flow": "read",
+      "label": "freeze threshold",
+      "label_style": "offset"
+    },
+    {
+      "id": "e3",
+      "source": "n3",
+      "target": "n4",
+      "source_port": "bottom",
+      "target_port": "top",
+      "flow": "read",
+      "label": "assess rollout",
+      "label_style": "offset"
+    }
+  ]
+}
