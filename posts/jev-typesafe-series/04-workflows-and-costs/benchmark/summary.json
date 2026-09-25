@@ -1,0 +1,61 @@
+{
+  "jev": {
+    "n": 154,
+    "correct": 124,
+    "accuracy": 0.8051948051948052,
+    "errors": 1,
+    "cost_usd": 0.011034114,
+    "cost_missing": 1,
+    "median_seconds": 0.24319129151990637,
+    "p95_seconds": 0.3586904580006376,
+    "returned_models": [
+      "typesafe/jev-1.13-20260917"
+    ],
+    "providers": [
+      "TypeSafe"
+    ],
+    "cost_per_1000": 0.0716500909090909,
+    "wilson95": [
+      0.7355351350275087,
+      0.8599986152639228
+    ],
+    "valid_accuracy": 0.8104575163398693,
+    "input_tokens": 262717,
+    "output_tokens": 126726,
+    "max_seconds": 40.14999779104255,
+    "mean_success_cost": 7.211839215686275e-05
+  },
+  "gemini": {
+    "n": 154,
+    "correct": 114,
+    "accuracy": 0.7402597402597403,
+    "errors": 0,
+    "cost_usd": 0.0174785,
+    "cost_missing": 0,
+    "median_seconds": 0.616939895437099,
+    "p95_seconds": 1.0583759589353576,
+    "returned_models": [
+      "google/gemini-2.5-flash-lite"
+    ],
+    "providers": [
+      "Google"
+    ],
+    "cost_per_1000": 0.11349675324675326,
+    "wilson95": [
+      0.6657547304559079,
+      0.8030697112628784
+    ],
+    "valid_accuracy": 0.7402597402597403,
+    "input_tokens": 165293,
+    "output_tokens": 2373,
+    "max_seconds": 1.4130603339290246,
+    "mean_success_cost": 0.00011349675324675326
+  },
+  "paired": {
+    "both_correct": 111,
+    "jev_only": 13,
+    "gemini_only": 3,
+    "both_wrong": 27,
+    "mcnemar_exact_p": 0.021270751953125
+  }
+}

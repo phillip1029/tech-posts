@@ -1,0 +1,21 @@
+{
+  "model": "typesafe/jev-1.13-20260917",
+  "answers": {
+    "intent": {
+      "type": "choice",
+      "choice": "card_arrival",
+      "probabilities": {
+        "cash_withdrawal": 0,
+        "card_arrival": 1
+      },
+      "confidence": 1
+    }
+  },
+  "usage": {
+    "input_tokens": 324,
+    "output_tokens": 39,
+    "cost": 1.3608e-05
+  },
+  "id": "gen-dec-1790346153-5UYK5F6V5bPIOt3ZE4FW",
+  "provider": "TypeSafe"
+}

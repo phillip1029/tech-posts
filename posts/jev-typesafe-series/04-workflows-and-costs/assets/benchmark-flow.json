@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "mode": "architecture",
+  "template_type": "architecture",
+  "style": 1,
+  "semantic_profile": "generic",
+  "quality_profile": "showcase",
+  "text_policy": "strict",
+  "width": 480,
+  "height": 815,
+  "title": "A paired public-data comparison",
+  "nodes": [
+    {
+      "id": "n0",
+      "kind": "rect",
+      "x": 100,
+      "y": 110,
+      "width": 280,
+      "height": 64,
+      "label": "BANKING77 test split",
+      "sublabel": "77 intents; 40 messages per intent",
+      "fill": "#eff6ff",
+      "stroke": "#bfdbfe",
+      "flat": true
+    },
+    {
+      "id": "n1",
+      "kind": "rect",
+      "x": 100,
+      "y": 244,
+      "width": 280,
+      "height": 64,
+      "label": "Freeze 154 messages",
+      "sublabel": "Two per intent; save row IDs",
+      "fill": "#eff6ff",
+      "stroke": "#bfdbfe",
+      "flat": true
+    },
+    {
+      "id": "n2",
+      "kind": "rect",
+      "x": 100,
+      "y": 378,
+      "width": 280,
+      "height": 64,
+      "label": "Two API workflows",
+      "sublabel": "Gemini JSON / Jev Choice",
+      "fill": "#eff6ff",
+      "stroke": "#bfdbfe",
+      "flat": true
+    },
+    {
+      "id": "n3",
+      "kind": "rect",
+      "x": 100,
+      "y": 512,
+      "width": 280,
+      "height": 64,
+      "label": "Exact-match scoring",
+      "sublabel": "Compare predictions with gold",
+      "fill": "#eff6ff",
+      "stroke": "#bfdbfe",
+      "flat": true
+    },
+    {
+      "id": "n4",
+      "kind": "rect",
+      "x": 100,
+      "y": 646,
+      "width": 280,
+      "height": 64,
+      "label": "Report three measures",
+      "sublabel": "Accuracy, API cost, elapsed time",
+      "fill": "#f0fdfa",
+      "stroke": "#bfdbfe",
+      "flat": true
+    }
+  ],
+  "arrows": [
+    {
+      "id": "e0",
+      "source": "n0",
+      "target": "n1",
+      "source_port": "bottom",
+      "target_port": "top",
+      "flow": "read",
+      "label": "seeded sample",
+      "label_style": "offset"
+    },
+    {
+      "id": "e1",
+      "source": "n1",
+      "target": "n2",
+      "source_port": "bottom",
+      "target_port": "top",
+      "flow": "read",
+      "label": "same input and labels",
+      "label_style": "offset"
+    },
+    {
+      "id": "e2",
+      "source": "n2",
+      "target": "n3",
+      "source_port": "bottom",
+      "target_port": "top",
+      "flow": "read",
+      "label": "record each response",
+      "label_style": "offset"
+    },
+    {
+      "id": "e3",
+      "source": "n3",
+      "target": "n4",
+      "source_port": "bottom",
+      "target_port": "top",
+      "flow": "read",
+      "label": "aggregate both arms",
+      "label_style": "offset"
+    }
+  ]
+}
